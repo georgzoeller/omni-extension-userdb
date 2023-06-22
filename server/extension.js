@@ -2,13 +2,10 @@
 import Exp from "jsonata";
 var UserDBGet = {
   schema: {
-    "namespace": "omnitool",
     "tags": ["default"],
     "componentKey": "userdb_get",
-    "apiKey": "omni.userdb_get",
     "category": "Storage",
     "operation": {
-      "operationId": "userdb_get",
       "schema": {
         "title": "Get User Value",
         "type": "object",
@@ -84,7 +81,7 @@ var UserDBGet = {
         delete json._id;
         const ret = { key, rev: json._rev, json: json.value, text: "", jsonata: void 0 };
         delete json._rev;
-        if (payload.jsonata != null) {
+        if (payload.jsonata != null && typeof payload.jsonata === "string" && payload.jsonata.trim().length > 0) {
           const expression = Exp(payload.jsonata);
           let tmp = await expression.evaluate(ret.json);
           ret.jsonata = tmp;
@@ -101,13 +98,10 @@ var UserDBGet = {
 };
 var UserDBDel = {
   schema: {
-    "namespace": "omnitool",
     "tags": ["default"],
     "componentKey": "userdb_del",
-    "apiKey": "omni.userdb_del",
     "category": "Storage",
     "operation": {
-      "operationId": "userdb_del",
       "schema": {
         "title": "Delete User Value",
         "type": "object",
@@ -168,13 +162,10 @@ var UserDBDel = {
 };
 var UserDBPut = {
   schema: {
-    "namespace": "omnitool",
     "tags": ["default"],
     "componentKey": "userdb_put",
-    "apiKey": "omni.userdb_put",
     "category": "Storage",
     "operation": {
-      "operationId": "userdb_put",
       "schema": {
         "title": "Put User Value",
         "type": "object",
@@ -259,13 +250,10 @@ var UserDBPut = {
 };
 var WorkflowStoragePut = {
   schema: {
-    "namespace": "omnitool",
     "tags": ["default"],
     "componentKey": "workflowstorage_put",
-    "apiKey": "omni.workflowstorage_put",
     "category": "Storage",
     "operation": {
-      "operationId": "workflowstorage_put",
       "required": ["key", "value"],
       "schema": {
         "title": "Workflow Storage Put Value",
@@ -350,13 +338,10 @@ var WorkflowStoragePut = {
 };
 var WorkflowStorageGet = {
   schema: {
-    "namespace": "omnitool",
     "tags": ["default"],
     "componentKey": "workflowstorage_get",
-    "apiKey": "omni.workflowstorage_get",
     "category": "Storage",
     "operation": {
-      "operationId": "workflowstorage_get",
       "schema": {
         "title": "Get Workflow Storage Value",
         "type": "object",
@@ -427,7 +412,7 @@ var WorkflowStorageGet = {
         delete json._id;
         const ret = { rev: json._rev, json: json.value, text: "", jsonata: void 0 };
         delete json._rev;
-        if (payload.jsonata != null) {
+        if (payload.jsonata != null && typeof payload.jsonata === "string" && payload.jsonata.trim().length > 0) {
           const expression = Exp(payload.jsonata);
           let tmp = await expression.evaluate(ret.json);
           ret.jsonata = tmp;

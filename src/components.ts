@@ -108,8 +108,8 @@ const UserDBGet =  {
       //@ts-ignore
       delete json._rev
 
-      if (payload.jsonata != null) {
-        console.error('jsonata', payload.jsonata)
+      if (payload.jsonata != null && typeof payload.jsonata === 'string' && payload.jsonata.trim().length > 0) {
+
         const expression = Exp(payload.jsonata)
 
         let tmp = await expression.evaluate(ret.json)
@@ -535,7 +535,7 @@ const WorkflowStorageGet = {
       //@ts-ignore
       delete json._rev
 
-      if (payload.jsonata != null) {
+      if (payload.jsonata != null && typeof payload.jsonata === 'string' && payload.jsonata.trim().length > 0) {
 
         const expression = Exp(payload.jsonata)
 
