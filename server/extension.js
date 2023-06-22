@@ -81,7 +81,6 @@ var UserDBGet = {
         delete json._id;
         const ret = { key, rev: json._rev, json: json.value, text: "", jsonata: void 0 };
         delete json._rev;
-        console.log(ret);
         if (payload.jsonata != null && typeof payload.jsonata === "string" && payload.jsonata.trim().length > 0) {
           const expression = Exp(payload.jsonata);
           let tmp = await expression.evaluate(ret.json);

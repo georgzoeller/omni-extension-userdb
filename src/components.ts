@@ -107,7 +107,7 @@ const UserDBGet =  {
       const ret = { key: key, rev: json._rev, json: json.value, text: "", jsonata: undefined }
       //@ts-ignore
       delete json._rev
-      console.log(ret)
+
 
       if (payload.jsonata != null && typeof payload.jsonata === 'string' && payload.jsonata.trim().length > 0) {
 
