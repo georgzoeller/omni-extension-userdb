@@ -4,4 +4,4 @@ description: A small extension adding components that allow users to store and r
 author: Georg Zoeller
 origin: https://github.com/georgzoeller/omni-extension-userdb.git
 client:
-  addToWorkbench: true
+  addToWorkbench: false
