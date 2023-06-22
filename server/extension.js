@@ -62,7 +62,7 @@ var UserDBGet = {
         }
       },
       "method": "X-CUSTOM",
-      "summary": "A standard text input component"
+      "summary": "Retrieve a user stored JSON from the database, optionally filtered by a jsonata expression"
     }
   },
   functions: {
@@ -135,7 +135,7 @@ var UserDBDel = {
           "contentType": "application/json"
         },
         "method": "X-CUSTOM",
-        "summary": "A standard text input component"
+        "summary": "Delete a user stored JSON from the database"
       }
     }
   },
@@ -221,7 +221,7 @@ var UserDBPut = {
         }
       },
       "method": "X-CUSTOM",
-      "summary": "A standard text input component"
+      "summary": "Store a user stored JSON in the database"
     }
   },
   functions: {
@@ -309,7 +309,7 @@ var WorkflowStoragePut = {
         }
       },
       "method": "X-CUSTOM",
-      "summary": "A standard text input component"
+      "summary": "Store a user and /workflow scoped JSON to the database"
     }
   },
   functions: {
@@ -393,7 +393,7 @@ var WorkflowStorageGet = {
         }
       },
       "method": "X-CUSTOM",
-      "summary": "A standard text input component"
+      "summary": "Retrieve a user per workflow scoped JSON from the database"
     }
   },
   functions: {
