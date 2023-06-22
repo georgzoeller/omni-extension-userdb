@@ -1,0 +1,7 @@
+title: UserDB Extension
+version: 0.0.1
+description: A small extension adding components that allow users to store and retrieve data from the local database
+author: Georg Zoeller
+origin: https://github.com/georgzoeller/omni-extension-userdb.git
+client:
+  addToWorkbench: true
