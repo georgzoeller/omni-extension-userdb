@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) 2023 MERCENARIES.AI PTE. LTD.
+ * All rights reserved.
+ */
+
 import Exp from 'jsonata'
 
 enum OMNITOOL_DOCUMENT_TYPES {
